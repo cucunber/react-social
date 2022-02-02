@@ -1,0 +1,26 @@
+@import '../../styles/index.scss';
+
+.button {
+    /*подключил стили из микисна flex*/
+    @include flex;
+    /* подключил стили из миксина Roboto*/
+    @include Roboto;
+    padding: 8px;
+    /*использовал переменную $border-radius. Эквивалентно border-radius: 12px*/
+    border-radius: $border-radius;
+    font-size: 24px;
+    transition: 0.4s ease;
+    /*эквивалентно .button.yellow*/
+    &.yellow {
+        background-color: $accent-1;
+    }
+    /*эквивалентно .button.orange*/
+    &.orange {
+        background-color: $accent-2;
+    }
+    /*эквивалентно .button:disabled*/
+    &:disabled {
+        cursor: not-allowed;
+        filter:grayscale(1);
+    }
+}

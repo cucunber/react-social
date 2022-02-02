@@ -1,0 +1,37 @@
+/*
+    И так миксины, по сути это те же самые функции из js в css. Позволяют с помощью одной строчки задать множество стилей,они как 
+    бы вставляют свое содержимое в класс 
+    Например flex (компнонета button).
+    Чтобы подключить миксин нужно в файле стилей импортировать его @import 'путь до styles/index.scss'. Затем для определенного
+    стиля прописать @include flex;. Если мы хотим передать туда аргумент, то пишем так 
+    @include flex(flex-start, flex-start) (в данном случае justify и align будут flex-start, а не center)
+*/
+
+@mixin flex($justify: center, $align: center, $direction: row, $wrap: nowrap, $gap: 0) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal, $format: "woff") {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+        @if $format == "woff" {
+            src: url("#{$file-path}.#{$format}") format($format);
+        } @else {
+            src: url("#{$file-path}.#{$format}") format("truetype");
+        }
+    }
+}
+
+@mixin Roboto($weight: normal, $style: normal) {
+    font-family: "Roboto", sans-serif;
+    font-weight: $weight;
+    font-style: $style;
+}
