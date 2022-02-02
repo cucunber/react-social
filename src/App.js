@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { Profile } from './pages';
 
 function App() {
