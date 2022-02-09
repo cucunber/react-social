@@ -1,15 +1,16 @@
 import './App.scss';
-import { Profile } from './pages';
+import Header from './components/Header';
+import Navbar from './components/Navbar';
+import Profile from './components/Profile';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        header
-      </header>
+    <div className='app-wrapper'>
+      <Header />
+      <Navbar />
       <Profile />
     </div>
-  );
+  )
 }
 
 export default App;

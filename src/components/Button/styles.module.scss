@@ -2,10 +2,10 @@
 
 .button {
     /*подключил стили из микисна flex*/
-    @include flex;
+    @include flex($align:left);
     /* подключил стили из миксина Roboto*/
     @include Roboto;
-    padding: 8px;
+    padding: 28px;
     /*использовал переменную $border-radius. Эквивалентно border-radius: 12px*/
     border-radius: $border-radius;
     font-size: 24px;
