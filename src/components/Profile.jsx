@@ -2,12 +2,12 @@ import React from "react";
 
 const Profile = () => {
     return (
-<div className='content'>
-      <div>
+        <div className='content'>
+          <div>
         <img src="https://www.forumdaily.com/wp-content/uploads/2021/04/shutterstock_1272261553.jpg"></img>
       </div>
-      <div>
-        Ava+description
+        <div>
+         Ava+description
       </div>
       <div>
         My Posts
