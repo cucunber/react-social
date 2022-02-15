@@ -1,7 +1,7 @@
 import './App.scss';
-import Header from './components/Header';
-import Navbar from './components/Navbar';
-import Profile from './components/Profile';
+import Header from './pages/Header/Header';
+import Navbar from './pages/Navbar/Navbar';
+import Profile from './pages/Profile/Profile';
 
 const App = () => {
   return (
